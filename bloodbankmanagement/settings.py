@@ -130,7 +130,9 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 print(STATIC_DIR)
-STATICFILES_DIRS= [STATIC_DIR,]
+STATICFILES_DIRS= [
+    'static/css'
+]
 LOGIN_REDIRECT_URL='/afterlogin'
 
 
