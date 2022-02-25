@@ -48,4 +48,4 @@ urlpatterns = [
     path('update-approve-status/<int:pk>', views.update_approve_status_view,name='update-approve-status'),
     path('update-reject-status/<int:pk>', views.update_reject_status_view,name='update-reject-status'),
     
-]
+] +     static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
