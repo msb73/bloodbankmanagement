@@ -1,0 +1,54 @@
+{% load static %}
+<!DOCTYPE html>
+
+<head>
+    <style>
+        .xyz{
+          margin-bottom: 0px;
+
+          background-size:auto;
+          object-fit: fill;
+          align-self: center;
+          background-repeat: no-repeat;
+          padding: 0%;
+          margin: 0%;
+          
+        }
+    img{
+      object-fit: fill;
+      padding: 0%;
+      margin: 0%;
+      
+    }
+    #except{
+      background: #0C4B33;
+      overflow: hidden;
+      margin: 0;
+      padding: 10px 0 6px;
+      position: relative;
+      z-index: 0;
+    }
+      </style>
+      
+</head>
+
+
+<body>
+  {% if error %}
+  <div id = 'except'>
+<h2>{{error}}<h2>
+  </div>
+{% endif %}
+  {% include "blood/navbar.html" %}
+<br>
+<section id="abc" style="margin-bottom: 0px;" class="jumbotron jumbotron-fluid d-flex justify-content-center align-items-center xyz">
+  <img src="{% static "image/homepage.jpg" %}" alt="">
+    </div>  
+  </section>
+
+
+
+  {% include "blood/footer.html" %}
+</body>
+
+</html>
