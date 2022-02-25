@@ -22,16 +22,12 @@ from django.conf import settings
 from django.conf.urls.static import static
 urlpatterns = [
     path('admin/', admin.site.urls),
-
-    
     path('donor/',include('donor.urls')),
     path('patient/',include('patient.urls')),
-
-    
-    path('',views.home_view,name='home'),
-    path('patient/patient-login', views.myloginview.as_view(template_name="patient/patientlogin.html"),name='patient-login'),
-    path('donor/donor-login', views.myloginview.as_view(template_name="donor/donorlogin.html"),name='donor-login'),
-    path('admin/admin-login', views.myloginview.as_view(template_name="blood/adminlogin.html"),name='admin-login'),
+    path('', views.home_view, name='home'),
+    path('patient/patient-login', views.myloginview.as_view(template_name="patient/patientlogin.html"), name='patient-login'),
+    path('donor/donor-login', views.myloginview.as_view(template_name="donor/donorlogin.html"), name='donor-login'),
+    path('admin/admin-login', views.myloginview.as_view(template_name="blood/adminlogin.html"), name='admin-login'),
     path('logout', LogoutView.as_view(template_name='blood/logout.html'),name='logout'),
     path('logout', LogoutView.as_view(template_name='blood/index.html'),name='error-logout'),
     path('afterlogin', views.afterlogin_view,name='afterlogin'),
