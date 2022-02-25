@@ -57,7 +57,7 @@ ROOT_URLCONF = 'bloodbankmanagement.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [TEMPLATE_DIR, STATIC_DIR,],
+        'DIRS': [TEMPLATE_DIR, ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -121,7 +121,9 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
 STATIC_URL = '/static/'
+STATICFILES_DIR = [
+    BASE_DIR / 'static'
+]
 LOGIN_REDIRECT_URL='/afterlogin'
-
 
 
