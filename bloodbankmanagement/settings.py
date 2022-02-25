@@ -16,10 +16,7 @@ import os
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 TEMPLATE_DIR = os.path.join(BASE_DIR,'templates')
 
-STATIC_DIR=os.path.join(BASE_DIR,'static')
-MEDIA_ROOT=os.path.join(BASE_DIR,'static')
-PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
-STATIC_ROOT = ''
+
 print(f'Base Dir = {BASE_DIR}')
 print(f'Static Dir = {STATIC_DIR}')
 print(f'Template Dir = {TEMPLATE_DIR}')
@@ -129,11 +126,6 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
 STATIC_URL = '/static/'
-print(STATIC_DIR)
-
-STATICFILES_DIRS= [
-    os.path.join(BASE_DIR, 'static')
-]
 LOGIN_REDIRECT_URL='/afterlogin'
 
 
