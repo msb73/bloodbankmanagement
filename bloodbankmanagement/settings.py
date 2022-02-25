@@ -130,8 +130,9 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 print(STATIC_DIR)
+
 STATICFILES_DIRS= [
-    'static/css'
+    os.path.join(BASE_DIR, 'static')
 ]
 LOGIN_REDIRECT_URL='/afterlogin'
 
